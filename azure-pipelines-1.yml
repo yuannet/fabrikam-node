@@ -20,3 +20,10 @@ steps:
     replaceExistingArchive: true
 - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
   artifact: drop
+
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name:  landfinancehub
+    resourceType: VirtualMachine
+    tags: landfinancehub
