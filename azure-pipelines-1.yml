@@ -21,6 +21,7 @@ steps:
 - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
   artifact: drop
 
+    
 - deployment: VMDeploy
   displayName: web
   environment:
